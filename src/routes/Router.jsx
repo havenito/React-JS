@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import FetchCats from "../components/FetchCats/FetchCats"; 
 import FetchRaces from "../components/FetchRaces/FetchRaces"; 
 import RaceDetails from "../components/RaceDetails/RaceDetails"; 
-import NotFoundPage from "../pages/NotFOundPage";
+import NotFoundPage from "../pages/NotFoundPage";
 import Contact from "../components/Contact/Contact";
 
 export default function Router() {
