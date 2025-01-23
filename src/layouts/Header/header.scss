@@ -1,0 +1,76 @@
+@import "../../index.css";
+
+// Variables
+$primary-color: #8B4513; 
+$secondary-color: #FFD700; 
+$background-color: #8FBC8F; 
+$border-color: #D2B48C; 
+$font-color: #333333; 
+$hover-color: #A0522D; 
+$logo-size: 100px; // Taille du logo réduite
+$arrow-size: 30px; // Taille de la flèche réduite
+$header-height: 75px; // Hauteur du header réduite
+$mouse-size: 20px; // Taille de l'icône de souris réduite
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styles
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height; // Hauteur du header
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem; // Padding réduit
+  background: $background-color;
+  box-shadow: 0 1rem 1rem rgba(139, 69, 19, 0.5);
+  z-index: 1000; // Assure que le header est au-dessus de tout
+
+  &__logo {
+    width: $logo-size;
+    height: auto;
+  }
+
+  &__title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 2rem; // Taille de la police réduite
+    color: $primary-color;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: $arrow-size;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  nav {
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-left: 1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

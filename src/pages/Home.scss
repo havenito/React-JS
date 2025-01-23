@@ -1,0 +1,52 @@
+
+// Variables
+$primary-color: #8B4513; 
+$secondary-color: #363532; 
+$background-color: #8FBC8F; 
+$border-color: #D2B48C; 
+$font-color: #333333; 
+$hover-color: #A0522D; 
+$button-padding: 10px 20px;
+$button-font-size: 1.2rem;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styles
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    margin: 1rem 0;
+
+    button {
+      background-color: $background-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: 4px;
+      padding: $button-padding;
+      font-size: $button-font-size;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  .auth-buttons {
+    margin-bottom: 2rem;
+  }
+}

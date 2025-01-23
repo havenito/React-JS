@@ -1,0 +1,63 @@
+@import "../../index.css";
+
+// Variables
+$primary-color: #8B4513; 
+$secondary-color: #FFD700; 
+$background-color: #8FBC8F; 
+$border-color: #D2B48C; 
+$font-color: #333333; 
+$hover-color: #A0522D; 
+$image-background-color: #ffffff; 
+$image-border-radius: 16px; 
+$image-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+$image-hover-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+
+// Styles
+.race-preview {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 5rem auto 2rem; 
+  text-align: center;
+  background-color: $background-color;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &__name {
+    color: $primary-color;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: $image-border-radius;
+    box-shadow: $image-box-shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: $image-hover-box-shadow;
+    }
+  }
+
+  &__info {
+    color: $font-color;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+
+    strong {
+      color: $primary-color;
+    }
+
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

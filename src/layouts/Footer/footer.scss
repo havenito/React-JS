@@ -1,0 +1,84 @@
+@import "../../index.css";
+
+// Variables
+$primary-color: #8B4513; 
+$secondary-color: #FFD700; 
+$background-color: #8FBC8F; 
+$border-color: #D2B48C; 
+$font-color: #333333; 
+$hover-color: #A0522D; 
+$footer-height: 80px; // Hauteur du footer réduite
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styles
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; // Padding réduit
+  background: $background-color;
+  box-shadow: 0 -1rem 1rem rgba(139, 69, 19, 0.5);
+  height: $footer-height;
+  text-align: center;
+  width: 100%; // Prendre toute la largeur de l'écran
+  position: relative; // Position relative pour être en bas de la page
+  margin-top: auto; // Assure que le footer est poussé vers le bas
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0.5rem 0; // Padding réduit
+
+    p {
+      margin: 0;
+      color: $font-color;
+      text-align: center;
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+
+        li {
+          a {
+            color: $font-color;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $font-color;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

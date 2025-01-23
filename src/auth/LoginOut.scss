@@ -1,0 +1,87 @@
+@import "../index.css";
+
+// Variables
+$primary-color: #8B4513; // Brun
+$secondary-color: #FFD700; // Or
+$background-color: #8FBC8F; // Vert clair
+$border-color: #D2B48C; // Tan
+$font-color: #333333; // Noir foncé
+$hover-color: #A0522D; // Brun foncé
+$button-padding: 10px 20px;
+$button-font-size: 1.2rem;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styles
+.loginout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: $background-color;
+  box-shadow: 0 1rem 1rem rgba(139, 69, 19, 0.5);
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 5rem; // Ajout de la marge supérieure pour placer le composant plus bas
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+
+    input {
+      padding: $button-padding;
+      font-size: $button-font-size;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: 4px;
+      padding: $button-padding;
+      font-size: $button-font-size;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  .auth-buttons {
+    margin-bottom: 2rem;
+
+    button {
+      background-color: $primary-color;
+      color: $secondary-color;
+      border: none;
+      border-radius: 4px;
+      padding: $button-padding;
+      font-size: $button-font-size;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+  }
+}
